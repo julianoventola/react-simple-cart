@@ -7,6 +7,7 @@ import { CartContext } from "../../contexts/Cart/CartContext";
 
 import ProductComponent from "../../components/product";
 import type { ProductProp } from "../../types/Product";
+import toast from "react-hot-toast";
 
 function Home() {
   const [products, setProducts] = useState<ProductProp[]>([])
@@ -23,6 +24,13 @@ function Home() {
 
   function handleAddCartItem(product: ProductProp) {
     addItemCart(product)
+    toast.success('Produto adicionado no carrinho!',{
+      style:{
+        borderRadius:10,
+        backgroundColor:"#121212",
+        color: "#fff"
+      }
+    })
   }
 
   return (
@@ -30,7 +38,7 @@ function Home() {
       <section>
         <h1 className="font-bold text-2xl mb-4 mt-10 text-center">Produtos em alta</h1>
 
-        <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
+        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {products.map((product) => (
             <ProductComponent key={product.id} product={product} handleAddCartItem={handleAddCartItem} />
           ))}

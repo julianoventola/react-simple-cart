@@ -17,11 +17,11 @@ function Product({ product, handleAddCartItem }:
       />
       <p className="font-medium my-2">{product.title}</p>
       <div className="flex items-center gap-3">
-        <p className="font-bold text-zinc-700/90">{product.price.toLocaleString("pt-BR", {
+        <p className="text-xl font-bold text-zinc-700/90">{product.price.toLocaleString("pt-BR", {
           style: "currency",
           currency: "BRL"
         })}</p>
-        <button onClick={() => { handleAddCartItem(product) }} className="bg-zinc-900 p-2 rounded">
+        <button onClick={() => { handleAddCartItem(product) }} className="bg-zinc-900 py-2 px-6 rounded">
           <BsCartPlus size={20} color="#fff" />
         </button>
       </div>
