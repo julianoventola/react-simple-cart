@@ -1,40 +1,42 @@
 # React Simple Cart
 
-Um exemplo simples de carrinho de compras em React
+A simple example of a shopping cart in React
 
-## Imagens
+## Images
 
-<img src="">
+<img width="240px" src="https://github.com/julianoventola/react-simple-cart/blob/main/.github/images/home_page.png?raw=true">
+<img width="12px">
+<img width="240px" src="https://github.com/julianoventola/react-simple-cart/blob/main/.github/images/details_page.png?raw=true">
+<img width="12px">
+<img width="240px" src="https://github.com/julianoventola/react-simple-cart/blob/main/.github/images/cart_page.png?raw=true">
 
-## Recursos
+## Features
 
-- Exibição de lista de produtos com imagens, nome e preço  
-- Adição e remoção de itens do carrinho  
-- Controle de quantidade (incrementar/decrementar)  
-- Cálculo automático do total do carrinho  
+- Product list display with images, name, and price
+- Adding and removing items from the cart
+- Quantity control (increment/decrement)
+- Automatic calculation of the cart total
 
-## Utilização
+## Usage
 
 ```bash
-# Clone o repositório
+# Clone the repository
 git clone https://github.com/julianoventola/react-simple-cart.git
 cd react-simple-cart
 
-# Instale dependências
+# Install dependencies
 npm install
 
-# Execute o servidor local para usar o "products.json" como database
+# Run the local server to use "products.json" as the database
 npm run server
 
-# Ececute o app
+# Run the app
 npm run dev
 ```
 
-## Tecnologias
+## Technologies
 - React
 - Tailwind
 - React router
 - React icons
 - React hot toaster
-
-
