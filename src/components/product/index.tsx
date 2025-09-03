@@ -1,21 +1,23 @@
 import { BsCartPlus } from "react-icons/bs";
 import type { ProductProp } from "../../types/Product";
-
+import { Link } from "react-router";
 
 
 function Product({ product, handleAddCartItem }:
   { product: ProductProp, handleAddCartItem: (product: ProductProp) => void }
 ) {
 
-
   return (
     <li className="w-full" id={String(product.id)}>
-      <img
-        className="w-full rounded-lg max-h-70 mb-2 object-contain"
-        src={product.cover}
-        alt="Imagem produto"
-      />
-      <p className="font-medium my-2">{product.title}</p>
+      <Link to={`/product/${product.id}`}>
+        <img
+          className="w-full rounded-lg max-h-70 mb-2 object-contain"
+          src={product.cover}
+          alt="Imagem produto"
+        />
+      </Link>
+
+      <Link to={`/product/${product.id}`}><p className="font-medium my-2">{product.title}</p></Link>
       <div className="flex items-center gap-3">
         <p className="text-xl font-bold text-zinc-700/90">{product.price.toLocaleString("pt-BR", {
           style: "currency",
