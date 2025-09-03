@@ -1,7 +1,13 @@
 import { BsCartPlus } from "react-icons/bs";
 import type { ProductProp } from "../../types/Product";
 
-function Product({ product }: { product: ProductProp }) {
+
+
+function Product({ product, handleAddCartItem }:
+  { product: ProductProp, handleAddCartItem: (product: ProductProp) => void }
+) {
+
+
   return (
     <li className="w-full" id={String(product.id)}>
       <img
@@ -15,7 +21,7 @@ function Product({ product }: { product: ProductProp }) {
           style: "currency",
           currency: "BRL"
         })}</p>
-        <button className="bg-zinc-900 p-2 rounded">
+        <button onClick={() => { handleAddCartItem(product) }} className="bg-zinc-900 p-2 rounded">
           <BsCartPlus size={20} color="#fff" />
         </button>
       </div>

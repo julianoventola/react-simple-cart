@@ -1,8 +1,10 @@
 import type { ReactNode } from "react"
+import type { ProductProp } from "./Product"
 
 export interface CartContextData {
   cart: CartProps[],
   cartAmount: number,
+  addItemCart: (product: ProductProp) => void
 }
 
 export interface CartProps {
@@ -11,8 +13,8 @@ export interface CartProps {
   description: string,
   price: number,
   cover: string,
-  amount:number,
-  total:number
+  amount: number,
+  total: number
 }
 
 export interface CartProviderProps {
