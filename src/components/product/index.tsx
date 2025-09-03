@@ -11,7 +11,7 @@ function Product({ product, handleAddCartItem }:
   return (
     <li className="w-full" id={String(product.id)}>
       <img
-        className="w-full rounded-lg max-h-70 mb-2"
+        className="w-full rounded-lg max-h-70 mb-2 object-contain"
         src={product.cover}
         alt="Imagem produto"
       />

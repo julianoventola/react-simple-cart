@@ -4,7 +4,9 @@ import type { ProductProp } from "./Product"
 export interface CartContextData {
   cart: CartProps[],
   cartAmount: number,
-  addItemCart: (product: ProductProp) => void
+  addItemCart: (product: ProductProp) => void,
+  removeItemCart: (product: ProductProp) => void,
+  cartTotal: number,
 }
 
 export interface CartProps {
